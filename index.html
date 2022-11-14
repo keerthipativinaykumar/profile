@@ -153,5 +153,29 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <p>Design and Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDrj4JuCdtyTJ2I_AmsVQ1_M_DcBdXaxEA",
+    authDomain: "vinaykumarkeerthipatiprofile.firebaseapp.com",
+    projectId: "vinaykumarkeerthipatiprofile",
+    storageBucket: "vinaykumarkeerthipatiprofile.appspot.com",
+    messagingSenderId: "425645155471",
+    appId: "1:425645155471:web:87d73a97b2d73c53f0fcfa",
+    measurementId: "G-BJ1F7DZ0BR"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 </body>
 </html>
