@@ -35,10 +35,10 @@ export default function App() {
     >
       <Stack.Navigator initialRouteName='Splash'>
         <Stack.Screen name="Splash" component={SplashView} options={{ headerShown: false }} />
-        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="AboutmeScreen" component={AboutmeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="MyprojectsScreen" component={MyprojectsScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="KnowMoreScreen" component={KnowMoreScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="KnowMoreScreen" component={KnowMoreScreen} options={{ headerShown: false }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

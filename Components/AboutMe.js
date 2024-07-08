@@ -70,7 +70,7 @@ const AboutMe = () => {
         }}>
             <Text numberOfLines={1} style={{ fontFamily: 'PoppinsBold', fontSize: WIDTH > maxScreenWidth ?40:24, color: 'black', }}>{`About Me`}</Text>
             <View style={{marginVertical:WIDTH > maxScreenWidth ?0:10,}}>
-                <Text style={{ fontFamily: 'PoppinsMedium', fontSize: WIDTH > maxScreenWidth ?18:12, color: 'black', }}>{`I'm a mobile app developer with 4years experience in developing and launching successful apps on both Android and iOS platforms. I have worked with a variety of clients, from large corporations to startups, and have expertise in developing applications for different industries. My key projects include developing the ${highlight('Eenadu News')} and ${highlight('Etv Bharat Elections')} apps, both of which have over a ${highlight('million downloads')}. Additionally, I have experience in web development and have worked on various freelance projects.`}</Text>
+                <Text style={{ fontFamily: 'PoppinsMedium', fontSize: WIDTH > maxScreenWidth ?18:12, color: 'black', }}>{`I'm a mobile app developer with 5-Years experience in developing and launching successful apps on both Android and iOS platforms. I have worked with a variety of clients, from large corporations to startups, and have expertise in developing applications for different industries. My key projects include developing the ${highlight('Eenadu News')} and ${highlight('Etv Bharat Elections')} apps, both of which have over a ${highlight('million downloads')}. Additionally, I have experience in web development and have worked on various freelance projects.`}</Text>
             </View>
         </View>
     )
