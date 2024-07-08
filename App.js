@@ -30,7 +30,7 @@ const linking = {
 export default function App() {
   return (
     <NavigationContainer
-    linking={linking}
+    // linking={linking}
     fallback={<SplashView/>}
     >
       <Stack.Navigator initialRouteName='Splash'>
