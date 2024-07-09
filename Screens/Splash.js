@@ -46,24 +46,26 @@ const SplashView = () => {
             backgroundColor: '#e3c2ab',
             justifyContent: 'center',
             alignContent: 'center',
-            height: HEIGHT,
-            width: WIDTH,
+            // height: HEIGHT,
+            // width: WIDTH,
         }}
         // onLayout={onLayoutRootView}
         >
-            <View style={{ alignSelf: "center", justifyContent: 'space-around', alignContent: "space-around", flexDirection: 'row', }}>
-                <View style={{ borderWidth: 4, borderColor: "#fff", borderRadius: 100, justifyContent: 'center', alignContent: "center", }}>
+            <View style={{ alignSelf: "center", justifyContent: 'space-around', alignContent: "space-around", flexDirection: WIDTH < 600?"column":'row', }}>
+                <View style={{ width: 125, height: 125, borderWidth: 4, 
+                    borderColor: "#fff", borderRadius: 100, justifyContent: 'center', 
+                    alignContent: "center",alignSelf:"center",marginBottom:WIDTH < 600?12:0 }}>
                     <Image
                         resizeMode='contain'
                         source={require('../assets/images/VinayBG.png')}
-                        style={{ width: 125, height: 125, borderRadius: 100, alignSelf: "center", }}
+                        style={{ flex:1, borderRadius: 100, alignSelf: "center", }}
                     />
                 </View>
-                <View style={{ alignSelf: "center", marginLeft: 18, }}>
-                    <Text style={{ fontFamily: 'MontserratBold', fontSize: 32, color: 'black' }}>{`VINAY KUMAR KEERTHIPATI`}</Text>
-                    <Text style={{ fontFamily: 'MontserratRegular', fontSize: 24, color: 'black' }}>{`Mobile App Developer`}</Text>
+                <View style={{ alignSelf:WIDTH < 600?"center":"center", marginLeft: 18,marginBottom:WIDTH < 600?12:0,justifyContent:"center",alignContent:"center", }}>
+                    <Text numberOfLine={2} style={{marginBottom:WIDTH < 600?6:0, fontFamily: 'MontserratBold', fontSize: 32, color: 'black',alignSelf:WIDTH < 600?"center":"flex-start",textAlign:WIDTH < 600?"center":"flex-start" }}>{`VINAY KUMAR KEERTHIPATI`}</Text>
+                    <Text style={{ fontFamily: 'MontserratRegular', fontSize: 24, color: 'black',alignSelf:WIDTH < 600?"center":"flex-start" }}>{`Mobile App Developer`}</Text>
                     {/* <Text style={{ fontFamily: 'MontserratMedium', fontSize: 24, color: 'black' }}>{`Product | Tech`}</Text> */}
-                    <View style={{ flexDirection: "row", marginTop: 12, }}>
+                    <View style={{ flexDirection: "row", marginTop: 12,alignSelf:WIDTH < 600?"center":"flex-start" }}>
                         <Pressable
                             onPress={() => {
                                 // notion profile url
