@@ -1,9 +1,8 @@
-import { View, Text, Image, Pressable, FlatList, Linking, Platform, } from 'react-native'
+import { View, Text, Image, Pressable, FlatList, Linking, Platform, Dimensions, } from 'react-native'
 import React, { useCallback, useLayoutEffect, useState } from 'react'
 import { StackActions, useNavigation } from '@react-navigation/native'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { Dimensions } from 'react-native-web';
 import { Entypo, MaterialCommunityIcons } from '@expo/vector-icons';
 
 SplashScreen.preventAutoHideAsync();
@@ -12,8 +11,8 @@ const SplashView = () => {
 
     const navigation = useNavigation();
 
-    const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
-    const maxScreenWidth = 400;
+    // const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
+    // const maxScreenWidth = 400;
 
     const [showStepOne, setShowStepOne] = useState(false);
     const [showStepTwo, setShowStepTwo] = useState(false);
@@ -36,6 +35,45 @@ const SplashView = () => {
         }
     }, [fontsLoaded]);
 
+    const window = Dimensions.get("window");
+    const screen = Dimensions.get("screen");
+  
+    const [dimensions, setDimensions] = useState({ window, screen });
+  
+    const [width, setWidth] = useState(dimensions?.window?.width);
+    const [height, setHeight] = useState(dimensions?.window?.height);
+    const [WIDTH, setWIDTH] = useState(dimensions?.screen?.width);
+    const [HEIGHT, setHEIGHT] = useState(dimensions?.screen?.height);
+    const [ITEM_WIDTH, setITEM_WIDTH] = useState(dimensions?.window?.width);
+    const [ITEM_HEIGHT, setITEM_HEIGHT] = useState(dimensions?.window?.height);
+  
+    useLayoutEffect(() => {
+      let isActive = true;
+      if (isActive) {
+        setWidth(dimensions?.window?.width);
+        setHeight(dimensions?.window?.height);
+        setWIDTH(dimensions?.screen?.width);
+        setHEIGHT(dimensions?.screen?.height);
+        setITEM_WIDTH(dimensions?.window?.width);
+        setITEM_HEIGHT(dimensions?.window?.height);
+      }
+      return () => {
+        isActive = false;
+      };
+    }, [dimensions]);
+  
+    useLayoutEffect(() => {
+      let isActive = true;
+      if (isActive) {
+        Dimensions.addEventListener("change", ({ window, screen }) => {
+          setDimensions({ window, screen });
+        });
+      }
+      return () => {
+        isActive = false;
+      };
+    }, []);
+
     if (!fontsLoaded) {
         return null;
     }
@@ -46,8 +84,10 @@ const SplashView = () => {
             backgroundColor: '#e3c2ab',
             justifyContent: 'center',
             alignContent: 'center',
-            // height: HEIGHT,
-            // width: WIDTH,
+            // height: height,
+            // width: width,
+            // height: dimensions?.window?.height,
+            // width: dimensions?.window?.width,
         }}
         // onLayout={onLayoutRootView}
         >
