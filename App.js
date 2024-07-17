@@ -3,11 +3,11 @@ import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SplashView from './Screens/Splash';
-import AboutmeScreen from './Screens/AboutmeScreen';
-import HomeScreen from './Screens/Home';
-import MyprojectsScreen from './Screens/MyprojectsScreen';
-import KnowMoreScreen from './Screens/KnowMoreScreen';
 import { useLayoutEffect, useMemo, useState } from 'react';
+import AboutMe from './Screens/AboutMe';
+import Experience from './Screens/Experience';
+import Projects from './Screens/Projects';
+import KnowMore from './Screens/KnowMore';
 
 const Stack = createNativeStackNavigator();
 
@@ -72,6 +72,10 @@ export default function App() {
   const RenderReturnStacks = useMemo(() => (
     <Stack.Navigator initialRouteName='Splash'>
       <Stack.Screen name="Splash" component={SplashView} options={{ headerShown: false }} />
+      <Stack.Screen name="AboutMe" component={AboutMe} options={{ headerShown: false }} />
+      <Stack.Screen name="Experience" component={Experience} options={{ headerShown: false }} />
+      <Stack.Screen name="Projects" component={Projects} options={{ headerShown: false }} />
+      <Stack.Screen name="KnowMore" component={KnowMore} options={{ headerShown: false }} />
     </Stack.Navigator>
   ), [width, height])
 

@@ -144,6 +144,46 @@ const SplashView = () => {
                             <Entypo name="mail-with-circle" size={40} color="black" style={{ alignSelf: 'center', }} />
                         </Pressable>
                     </View>
+
+                   {/* links to target sections */}
+                    <View style={{ flexDirection: "row", marginTop: 12,alignSelf:WIDTH < 600?"center":"flex-start" }}>
+                        <Pressable
+                            onPress={() => {
+                                navigation?.dispatch(StackActions?.push("AboutMe"))
+                                // notion profile url
+                                // Linking?.openURL(`https://vinaykumarkeerthipati.notion.site/Resume-9a7389cef30345439afd72f1122a6293`)
+                            }}
+                            style={{ borderRadius: 2, borderWidth: 0,borderBottomWidth:1,borderBottomColor:'#000', borderColor: "#fff", justifyContent: "center", alignContent: 'center', marginRight: 12, }}>
+                                                <Text style={{ fontFamily: 'MontserratRegular', fontSize: 14, color: 'black',alignSelf:WIDTH < 600?"center":"flex-start" }}>{`About Me`}</Text>
+                        </Pressable>
+                        <Pressable
+                            onPress={() => {
+                                navigation?.dispatch(StackActions?.push("Experience"))
+                                // notion profile url
+                                // Linking?.openURL(`https://vinaykumarkeerthipati.notion.site/Resume-9a7389cef30345439afd72f1122a6293`)
+                            }}
+                            style={{ borderRadius: 2, borderWidth: 0,borderBottomWidth:1,borderBottomColor:'#000', borderColor: "#fff", justifyContent: "center", alignContent: 'center', marginRight: 12, }}>
+                                                <Text style={{ fontFamily: 'MontserratRegular', fontSize: 14, color: 'black',alignSelf:WIDTH < 600?"center":"flex-start" }}>{`Experience`}</Text>
+                        </Pressable>
+                        <Pressable
+                            onPress={() => {
+                                navigation?.dispatch(StackActions?.push("Projects"))
+                                // notion profile url
+                                // Linking?.openURL(`https://vinaykumarkeerthipati.notion.site/Resume-9a7389cef30345439afd72f1122a6293`)
+                            }}
+                            style={{ borderRadius: 2, borderWidth: 0,borderBottomWidth:1,borderBottomColor:'#000', borderColor: "#fff", justifyContent: "center", alignContent: 'center', marginRight: 12, }}>
+                                                <Text style={{ fontFamily: 'MontserratRegular', fontSize: 14, color: 'black',alignSelf:WIDTH < 600?"center":"flex-start" }}>{`Projects`}</Text>
+                        </Pressable>
+                        <Pressable
+                            onPress={() => {
+                                navigation?.dispatch(StackActions?.push("KnowMore"))
+                                // notion profile url
+                                // Linking?.openURL(`https://vinaykumarkeerthipati.notion.site/Resume-9a7389cef30345439afd72f1122a6293`)
+                            }}
+                            style={{ borderRadius: 2, borderWidth: 0,borderBottomWidth:1,borderBottomColor:'#000', borderColor: "#fff", justifyContent: "center", alignContent: 'center', marginRight: 12, }}>
+                                                <Text style={{ fontFamily: 'MontserratRegular', fontSize: 14, color: 'black',alignSelf:WIDTH < 600?"center":"flex-start" }}>{`Know More`}</Text>
+                        </Pressable>
+                    </View>
                 </View>
             </View>
             {/* <View style={{ alignSelf: "center", marginTop: 24, }}>
