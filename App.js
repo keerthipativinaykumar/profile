@@ -8,6 +8,7 @@ import AboutMe from './Screens/AboutMe';
 import Experience from './Screens/Experience';
 import Projects from './Screens/Projects';
 import KnowMore from './Screens/KnowMore';
+import Skills from './Screens/Skills';
 
 const Stack = createNativeStackNavigator();
 
@@ -75,7 +76,8 @@ export default function App() {
       <Stack.Screen name="AboutMe" component={AboutMe} options={{ headerShown: false }} />
       <Stack.Screen name="Experience" component={Experience} options={{ headerShown: false }} />
       <Stack.Screen name="Projects" component={Projects} options={{ headerShown: false }} />
-      <Stack.Screen name="KnowMore" component={KnowMore} options={{ headerShown: false }} />
+      <Stack.Screen name="Skills" component={Skills} options={{ headerShown: false }} />
+      {/* <Stack.Screen name="KnowMore" component={KnowMore} options={{ headerShown: false }} /> */}
     </Stack.Navigator>
   ), [width, height])
 

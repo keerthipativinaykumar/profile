@@ -131,6 +131,29 @@ const Experience = () => {
                     <Text style={{ fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Ramoji Ticket Booking App (Alpha)`}</Text>
                     <Text style={{ fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Ticket Scanner App (Alpha)`}</Text>
                 </View>
+                
+                <View
+                    style={{
+                        borderWidth: 0.5, borderColor: '#fff',
+                        borderRadius: 4, padding: 6,
+                        marginVertical: 6,
+                    }}>
+                    <Text style={{ marginTop: 1, fontFamily: 'PoppinsMedium', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Blockchain`}</Text>
+                    <Text style={{ marginTop: 6, fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Built an app for tracking gas fees, DFC, and NFC.`}</Text>
+                    <Text style={{ marginTop: 6, fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Utilized chain agnostic layer technology.`}</Text>
+                </View>
+                
+                <View
+                    style={{
+                        borderWidth: 0.5, borderColor: '#fff',
+                        borderRadius: 4, padding: 6,
+                        marginVertical: 6,
+                    }}>
+                    <Text style={{ marginTop: 1, fontFamily: 'PoppinsMedium', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Healthcare`}</Text>
+                    <Text style={{ marginTop: 6, fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Doctor and patient apps for Android and iOS.`}</Text>
+                    <Text style={{ marginTop: 6, fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Features included appointment bookings, video calls, chat, payments, and more.`}</Text>
+                    <Text style={{ marginTop: 6, fontFamily: 'PoppinsRegular', fontSize: 14, color: 'black', alignSelf: WIDTH < 600 ? "center" : "flex-start" }}>{`Major hospital network collaboration delivering apps for doctors, nurses, labs, and patients.`}</Text>
+                </View>
             </View>
         </View>
     )
